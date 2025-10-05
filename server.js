@@ -13,6 +13,7 @@ dotenv.config();
 const app = express();
 app.use(cors({
   origin: ['https://platinumcarspa.in'], // your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 
