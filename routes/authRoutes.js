@@ -41,8 +41,8 @@ router.post("/login", async (req, res) => {
     console.log("User Find:", user);
     if (!user) return res.status(400).json({ message: "Invalid credentials" });
 
-    const isMatch = await user.matchPassword(password);
-    console.log("Password match:", isMatch);
+    /*const isMatch = await user.matchPassword(password);
+    //console.log("Password match:", isMatch);
     if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
 
     res.json({
@@ -54,7 +54,7 @@ router.post("/login", async (req, res) => {
         role: user.role,
       },
       token: generateToken(user._id, user.role),
-    });
+    });*/
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
